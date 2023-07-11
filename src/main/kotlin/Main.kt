@@ -1,11 +1,15 @@
 import momento.Editor
+import state.Canvas
+import state.DrawBrush
+import state.EraserBrush
+import state.SelectionBrush
 
 fun main(args: Array<String>) {
-    val editor = Editor()
 
-    editor.content = "1"
-    editor.content = "2"
-    editor.content = "3"
+    val canvas = Canvas()
 
-    editor.undo()
+    canvas.mouseDown(SelectionBrush())
+    canvas.mouseDown(DrawBrush())
+    canvas.mouseDown(EraserBrush())
+
 }
