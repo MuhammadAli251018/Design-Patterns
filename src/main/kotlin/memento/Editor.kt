@@ -1,4 +1,4 @@
-package momento
+package memento
 
 class Editor(
     private val history: History<EdContentState> = EdHistory()

@@ -1,4 +1,4 @@
-package momento
+package memento
 
 interface History <T> {
     fun undoChanges(): T

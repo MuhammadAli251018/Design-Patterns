@@ -1,15 +1,13 @@
-import momento.Editor
-import state.Canvas
-import state.DrawBrush
-import state.EraserBrush
-import state.SelectionBrush
+import iterator.HistoryManager
 
 fun main(args: Array<String>) {
+    val strHManager = HistoryManager<String>()
 
-    val canvas = Canvas()
-
-    canvas.mouseDown(SelectionBrush())
-    canvas.mouseDown(DrawBrush())
-    canvas.mouseDown(EraserBrush())
+    strHManager.add("A", "B", "C", "D")
+    //print elements
+    do {
+        println(strHManager.iterator.current())
+    }
+    while (strHManager.iterator.next())
 
 }
